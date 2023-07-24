@@ -8,11 +8,11 @@ import org.springframework.web.bind.annotation.RestController;
 // - Annotate a new class with the @RestController annotation.
 // - Create a new endpoint "/info" using the @GetMapping annotation.
 // - In the method, return a ResponseEntity with 200 OK
-    @RestController
-    public class responseEntityOK {
+@RestController
+public class responseEntityOK {
 
-        @GetMapping(value = "/greeting")
-        public ResponseEntity<String> responseEntity() {
-            return ResponseEntity.status(200).body("Good Afternoon!");
-        }
+    @GetMapping(value = "/info")
+    public ResponseEntity<String> info() {
+        return ResponseEntity.ok("Get info");
     }
+}
