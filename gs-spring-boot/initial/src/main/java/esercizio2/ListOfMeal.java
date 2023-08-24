@@ -46,12 +46,10 @@ public class ListOfMeal {
             for (Meal meal : listOfMeal.listaPiatti()) {
                 if (meal.getNome().equals(name)) {
                     return ResponseEntity.ok(meal.getNome());
-                } else {
-                    return ResponseEntity.status(404).body("Nome non trovato!");
                 }
             }
-            return ResponseEntity.ok(name);
-        }
+            return ResponseEntity.status(404).body("Nome non trovato!");
+            }
     }
 
     // Exercise 3: Create a GetMapping that returns a meal by any word of description
